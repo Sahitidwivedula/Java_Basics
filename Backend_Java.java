@@ -348,3 +348,293 @@
 //Also, examples for each of the topic - 12 examples.
 //Total : 20 programs.
 //***************************************************/
+
+//Non primitive datatypes
+//Functions or Methods
+// package com.mycompany.backend_java;
+// import java.util.*;
+
+// public class Backend_Java{
+// public static int calculateSum(int a, int b){
+//     int sum = a+b;
+//     return sum;
+// }
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int a= sc.nextInt();
+//         int b= sc.nextInt();
+//         sc.close();
+
+//         int sum= calculateSum(a, b);
+//         System.out.println("Sum is:"+sum);
+
+//     }
+// }
+
+// package com.mycompany.backend_java;
+// import java.util.*;
+
+// public class Backend_Java{
+// public static int calculateProduct(int a, int b){
+//     int multi= a*b;
+//     return multi;
+// }
+// public static void main(String[]args){
+//     Scanner sc= new Scanner(System.in);
+//     int a= sc.nextInt();
+//     int b= sc.nextInt();
+//     sc.close();
+
+//     int multi=calculateProduct(a, b);
+//     System.out.println("Multiplication of the 2 numbers is:"+multi);
+// }
+// }
+
+// package com.mycompany.backend_java;
+// import java.util.*;
+
+// public class Backend_Java{
+
+//     public static void printFactorial(int n){
+//         if(n<0){
+//             System.out.println("Invalid");
+//             return;
+//         }
+//         int factorial= 1;
+
+//         for(int i=n; i>=1; i--){
+//            factorial = factorial*i;
+//         }
+
+//         System.out.println(factorial);
+//         return;
+//     }
+//     public static void main(String[] args){
+//         Scanner sc= new Scanner(System.in);
+//         int n= sc.nextInt();
+//         sc.close();
+         
+//         printFactorial(n);
+//     }
+// }
+
+// package com.mycompany.backend_java;
+// import java.util.*;
+
+// public class Backend_Java{
+//     public static void main(String[] args){
+//         int[] marks = new int[3];
+//         marks[0] = 97;
+//         marks[1] = 98;
+//         marks[2] = 95;
+
+//         // System.out.println(marks[0]);
+//         // System.out.println(marks[1]);
+//         // System.out.println(marks[2]);
+
+//         //or use for loop
+//         for(int i=0; i<3; i++){
+//             System.out.println(marks[i]);
+//         }
+//     }
+// }
+
+
+// package com.mycompany.backend_java;
+// import java.util.*;
+
+// //2d arrays
+// public class Backend_Java{
+//     public static void main(String[] args){
+//         Scanner sc= new Scanner(System.in);
+//         int rows= sc.nextInt();
+//         int cols = sc.nextInt();
+
+//         int [][] numbers= new int[rows][cols];
+
+//         //input
+//         //rows
+//         for(int i=0; i<rows; i++){
+//             //columns
+//             for(int j=0; j<cols; j++){
+//                 numbers[i][j] = sc.nextInt();
+//             }
+//         }
+
+//         //output
+//         for(int i=0; i<rows; i++){
+//             for(int j=0; j<cols; j++){
+//                 System.out.print(numbers[i][j]+ " ");//here we will get a gap after entering each input element
+//             }
+//                 System.out.println();//here this is after the row is printed, it will go to the next line
+//         }
+//     }
+// }
+
+//example:
+// package com.mycompany.backend_java;
+// import java.util.*;
+
+//2d arrays
+// public class Backend_Java{
+//     public static void main(String[] args){
+//         Scanner sc= new Scanner(System.in);
+//         int rows= sc.nextInt();
+//         int cols = sc.nextInt();
+
+//         int [][] numbers= new int[rows][cols];
+
+//         //input
+//         //rows
+//         for(int i=0;i<rows;i++){
+//         for(int j=0; j<cols;j++){
+//             numbers[i][j]= sc.nextInt();
+//         }
+//         }
+//            int x= sc.nextInt();
+            
+//            //output
+//            for(int i=0; i<rows; i++){
+//             for(int j=0; j<cols;j++){
+//                 if(numbers[i][j]==x){
+//                     System.out.println("x found at the location:" +i + "," +j);
+//                 }
+//                 }
+//             }
+//     } 
+    
+// }
+
+//STRINGS:
+// package com.mycompany.backend_java;
+// import java.util.*;
+
+// public class Backend_Java{
+//     public static void main(String[] args){
+        //string declaration
+        // String name= "Tony";
+        // String fullName ="Tony Stark";
+        // String Sentence= "My name is Tony Stark";
+        // System.out.println(name +" "+ fullName + " "+ Sentence);
+
+        // to take input
+        // Scanner sc= new Scanner(System.in);
+        // String name= sc.nextLine();
+        // System.out.println("Your name is: "+name);
+
+        //Concatination:
+        // String firstName= "Tony";
+        // String lastName ="Stark";
+        // String fullName = firstName+ " " + lastName;
+        // System.out.println(fullName);
+
+        //length of string
+        // String firstName= "Tony";
+        // String lastName ="Stark";
+        // String fullName = firstName+ " " + lastName;
+        // System.out.println(fullName.length());
+
+        //print all the elements
+        // String firstName= "Tony";
+        // String lastName ="Stark";
+        // String fullName = firstName+ " " + lastName;
+        // System.out.println(fullName.length());
+        // for(int i=0; i<fullName.length(); i++){
+        //     System.out.println(fullName.charAt(i));
+        // }
+
+        //Compare two strings
+        // String name1 = "Sahiti";
+        // String name2 = "Sahiti";
+
+        //s1>s2 then +ve value
+        //s1==s2 then 0
+        //s1< s2 then -ve value
+
+        //hello wello , hello is small and wello is larger
+
+        // if(name1.compareTo(name2)==0){
+        //     System.out.println("Strings are equal");
+        // }else{
+        //     System.out.println("Strings are not equal");
+        // }
+
+        //substring:
+        // String sentence= "My name is Sahiti";
+        // substring(bed index, end index);
+
+        // String name= sentence.substring(11, sentence.length());
+        // System.out.println(name);
+
+        //String name= sentence.substring(5); //it by default takes the last element place as end index
+
+        //strings are immutable
+//     }
+// }
+
+
+//String builder : for modifying a string
+// package com.mycompany.backend_java;
+// import java.util.*;
+
+// public class Backend_Java{
+//     public static void main(String[] args){
+//         StringBuilder sb= new StringBuilder("Sahiti");
+//         System.out.println(sb);
+
+        // //char at index 0:
+        // System.out.println(sb.charAt(0));
+
+        // //set char at index:
+        // sb.setCharAt(0, 'T');
+        // System.out.println(sb);
+
+        //insert a element in a string
+        // sb.insert(0, 'D');
+        // System.out.println(sb);
+
+        //delete something
+        // sb.delete(0, 2);
+        // System.out.println(sb);
+
+        //append -> add something at the end
+        // sb.append('D'); //if using strings then str= str+"D"
+        // sb.append('w');
+        // sb.append('i');
+        // sb.append('v');
+        // sb.append('i');
+        // sb.append('d');
+        // System.out.println(sb);
+
+        //length
+        // System.out.println(sb.length());
+//     }
+// }
+
+
+//Reversing a string:
+// package com.mycompany.backend_java;
+// import java.util.*;
+
+// public class Backend_Java{
+//     public static void main(String[] args){
+//         StringBuilder sb= new StringBuilder("Sahiti");
+
+//         for(int i=0;i<sb.length()/2;i++){ //here we calculated what the front and back indexes are
+//             int front =i;
+//             int back = sb.length()-1-i; //here it means h is going to the position 5(length)-1-0(its position in string)=4 i.e, 4th index
+
+//             char frontChar = sb.charAt(front); //here we discovered what the front char is and which is the back char and assigned it to some variables like frontChar ad backChar
+//             char backChar= sb.charAt(back);
+
+//             sb.setCharAt(front, backChar); //here we replaced the front index character with backchar
+//             sb.setCharAt(back, frontChar);
+//         }
+
+//         System.out.println(sb);
+//     }
+// }
+
+//time complexity : O(n)
+
+// **** End of Java Basics ****//
