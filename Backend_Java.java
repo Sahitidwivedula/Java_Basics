@@ -637,4 +637,14 @@
 
 //time complexity : O(n)
 
+//pre increment post increment
+//pre means - value change and then value assign - ++a
+//post means - value assign and then vlaue change - a++
+
+//so for pre , 
+//ex b= ++a; then if a=10 and b=0 initially, then the result b=++a will be b=11 and a=11
+//for post, b= a++ then b=10, and a=11 will be the result
+
+//same rules for post
+
 // **** End of Java Basics ****//
