@@ -347,7 +347,7 @@
 //Solved Hackerrank problems of Variables, Datatypes, loops, operator and i/p,o/p st. - 8 progarms.
 //Also, examples for each of the topic - 12 examples.
 //Total : 20 programs.
-//***************************************************/
+//***************************************************//
 
 //Non primitive datatypes
 //Functions or Methods
