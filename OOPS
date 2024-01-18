@@ -1,1 +1,217 @@
+package com.mycompany.backend_java;
 
+import javax.sound.sampled.SourceDataLine;
+
+//**Class and Objects **//
+//Class pen has the blueprint or features of the pen
+// class Pen{
+//     String color;
+//     String type;
+
+//   //this method is called by pen1.write()
+//     public void write(){
+//         System.out.println("Pen Writes something");
+//     }
+//  // we are creating another method to print the color of the pen using "this"
+//     public void printColor(){
+//         System.out.println(this.color);
+//     }
+// }
+
+// public class OOPS {
+//     public static void main(String [] args){
+//         Pen pen1= new Pen();
+//         //create another pen with different properties
+//         Pen pen2 =new Pen();
+
+// // this contains the properties of the pen1
+//         pen1.color= "blue";
+//         pen1.type= "gel";
+// //write the properties of pen2
+//         pen2.color="black";
+//         pen2.type = "ball";
+
+//         pen1.write();
+//         pen1.printColor();
+//         pen2.printColor();
+    // }
+
+
+// class student{
+    //     String name;
+    //     int age;
+    
+    //     public void printinfo(){
+    //       System.out.println(this.name);
+    //       System.out.println(this.age);
+    //     }
+    //     //types of constructors
+    //     //non parameterized constructor, even if we don't write this in the code, it is by default created
+    //     student(){
+    //         System.out.println("constructor created and called");
+    //     }
+
+        //parameterized constructor
+        // student(String name, int age){
+        //     this.name =name;
+        //     this.age = age;
+        // }
+
+        //copy constructor, this will copy all the info from s2 and store it in the current object 
+//         student(student s2){
+//             this.name= s2.name;
+//             this.age = s2.age;
+//         }
+//     }
+// public class OOPS {
+//     public static void main(String[] args) {
+        //constructor is student(), they don't have any return tye, they just constuct a object
+        //constructor can only be called once , when an object is created
+
+        // student s1= new student(); //new is a key word,when this is used then a space is created in the heap and the object is stored there
+        // s1.name ="sahiti";
+        // s1.age = 22;
+
+        //for parameterized constructor we give
+        // student s1 =new student("Sahiti", 22);
+
+        // s1.printinfo();
+
+        //for copy constructor
+//         student s1 =new student();
+//         s1.name ="Sahiti";
+//         s1.age = 22;
+
+//         student s2= new student(s1);
+//         s2.printinfo(); //wea ssigned the s1 properties to s2
+//     }
+// }
+
+
+// 4 important concepts inheritence, polymorphism, abstraction, encapsulation
+
+//Polymorphism:
+//Poly-many, morphism-forms, same work done in difefrent ways
+//2 types- overloading, overriding
+
+//compile time polymorphism:
+//overloading - fns with same name but different works
+//the rules are that there should be something different in each of the fns, they should have diffetent return type
+//parameter types should be different, or no. of args shoukd be different
+
+// class student{
+//         String name;
+//         int age;
+    
+//         public void printinfo(String name){
+//           System.out.println(name);
+//         }
+
+//         public void printinfo(int age){
+//             System.out.println(age);
+//         }
+
+//         public void printinfo(String name, int age){
+//             System.out.println(name + " " + age);
+
+//         }
+// }
+// public class OOPS {
+//         public static void main(String[] args) {
+//             student s1 =new student();
+//             s1.name ="sahiti";
+//             s1.age= 22;
+
+//             s1.printinfo(s1.name, s1.age);
+//         }
+// }
+
+//Inheritence:
+// A class inherits the properties from another class, it increases the reusablitity of the code
+// class shape{ //parent class
+//     String color;
+// }
+
+// //child class
+// class Triangle extends shape{ 
+//     //this is inheriting all the properties from shape class
+// }
+// public class OOPS{
+//  public static void main(String[] args){
+//     Triangle t1= new Triangle();
+//     t1.color ="red"; 
+//  }
+// }
+
+//4 types of inheritence
+//single level inheritence: here shape class is inherited by the triangle class
+// class Shape{
+//     public void area(){
+//         System.out.println("displays area");
+//     }
+// }
+
+// class Triangle extends Shape{
+//     public void area(int l, int h){
+//         System.out.println((1/2)*l*h);
+//     }
+// }
+
+// public class OOPS{
+//     public static void main(String[] args) {
+        
+//     }
+// }
+
+//multi level inheritence : triangles extends the shape and equilateral extends the triangle
+// class Shape{
+//     public void area(){
+//         System.out.println("displays area");
+//     }
+// }
+
+// class Triangle extends Shape{
+//     public void area(int l, int h){
+//         System.out.println((1/2)*l*h);
+//     }
+// }
+
+// class equilateral extends Triangle{
+//     public void area(int l, int h){
+//         System.out.println((1/2)*l*h);
+// }
+// }
+// public class OOPS{
+//     public static void main(String[] args) {
+        
+//     }
+// }
+
+//hierarchical inheritence : both triangle and the circle are inheriting for the parent class shape
+class Shape{
+    public void area(){
+        System.out.println("displays area");
+    }
+}
+
+class Triangle extends Shape{
+    public void area(int l, int h){
+        System.out.println((1/2)*l*h);
+    }
+}
+
+class circle extends Shape{
+    public void area(int r){
+        System.out.println(3.14*r*r);
+}
+}
+public class OOPS{
+    public static void main(String[] args) {
+        
+    }
+}
+
+//hybrid inheritence: contains both single and mutiple or hierarchical inheritence
+
+//Encapsulation:
+//package : something that contains similar items
