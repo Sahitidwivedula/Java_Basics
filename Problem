@@ -1,0 +1,58 @@
+// Ques::Given an array of integers num and an integer target, return indices of the two numbers such that they add up to target.  You may assume that each input would have exactly one solution, and you may not use the same element twice.
+// You can return the answer in any order.
+
+// Example 1:
+
+// Input: num = [2,7,11,15], target = 9
+// Output: [0,1]
+// Explanation: Because num[0] + num[1] == 9, we return [0, 1]
+
+package com.mycompany.backend_java;
+import java.util.*;
+
+public class Problem {
+public void sumOfDigits(int[] num, int target) {
+    int first = 0; //points the first element 
+    int last = num.length-1; //points the last element
+
+
+        while(first < last) {
+            int sum = num[first] + num[last];
+   
+        if (sum == target) {
+                // Found the pair, print the indices
+                System.out.println("[" + first + "," + last+ "]");
+        break;
+        }else if(sum>target){    //or can do (sum<target) then first++
+            last-- ; 
+        } else {
+            first++; 
+        }
+    }
+}
+    public static void main(String[] args) {
+        //created an object 
+        Problem sol = new Problem();
+
+        // int[] num = {2, 7, 11, 15};
+        // int target = 9;
+        // solution.sumOfDigits(num, target);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+
+        int[] num = new int[size]; //array 
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            num[i] = sc.nextInt();
+        }
+        System.out.print("Enter the target: ");
+        int target = sc.nextInt();
+
+        //calling the method
+        sol.sumOfDigits(num, target);
+        sc.close();
+    }
+}
